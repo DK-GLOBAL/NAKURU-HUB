@@ -1,0 +1,9 @@
+{
+  "name": "nakuruhub-portable",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portable NakuruHub marketplace frontend starter",
+  "scripts": {
+    "start": "python3 -m http.server 8080"
+  }
+}

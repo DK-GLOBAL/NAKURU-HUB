@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173f33">
+<title>NakuruHub | Your City. Your Market.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topline"><span>NAKURU COUNTY · KENYA</span><span>Discover local. Buy local. Grow local.</span></div>
+<header class="header">
+  <a class="brand" href="#"><span class="brand-mark">N</span><span><b>Nakuru<span>Hub</span></b><small>YOUR CITY. YOUR MARKET.</small></span></a>
+  <nav><a href="#explore">Explore</a><a href="#categories">Categories</a><a href="#how">How it works</a></nav>
+  <div class="head-actions"><button class="ghost" id="savedBtn">♡ Saved <i id="savedCount">0</i></button><button class="primary" id="postTop">＋ Post a listing</button></div>
+  <button class="menu" id="menuBtn">☰</button>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><div class="eyebrow">THE HOME OF NAKURU DISCOVERY</div>
+    <h1>Find what you need.<br><em>Right here in Nakuru.</em></h1>
+    <p>Explore property, vehicles, local services, jobs, events and more — all in one trusted local marketplace.</p>
+    <div class="searchbar"><span>⌕</span><input id="searchInput" placeholder="What are you looking for?"><button id="searchBtn">Search</button></div>
+    <div class="hero-meta"><span>✓ Local discoveries</span><span>✓ Easy to use</span><span>✓ Built for Nakuru</span></div>
+  </div>
+  <div class="hero-art"><div class="art-card art-main"><div class="art-label">FEATURED DISCOVERY</div><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"><div class="art-caption"><b>Find your next place</b><span>Property · Nakuru</span></div></div><div class="floating-note"><b>Local finds,</b><br>closer to home <span>✦</span></div><div class="art-orbit"></div></div>
+</section>
+<section class="trust-strip"><div><b>One local hub</b><span>Everything happening around you</span></div><div><b>Simple discovery</b><span>Search and filter with ease</span></div><div><b>Community first</b><span>Support local sellers and services</span></div></section>
+<section class="section" id="categories"><div class="section-head"><div><div class="eyebrow">EXPLORE NAKURU</div><h2>Browse by category</h2><p>Whatever you’re looking for, start here.</p></div></div><div class="categories" id="categoryList"></div></section>
+<section class="section listings-section" id="explore"><div class="section-head"><div><div class="eyebrow">THE LOCAL MARKETPLACE</div><h2 id="listingHeading">Discover around you</h2><p>Hand-picked local listings and opportunities.</p></div><button class="outline" id="clearFilters">Clear filters ↗</button></div>
+<div class="toolbar"><div class="chips" id="filterChips"></div><select id="sortSelect"><option value="featured">Featured first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
+<div class="listing-grid" id="listingGrid"></div><div class="empty hidden" id="emptyState"><h3>No listings found</h3><p>Try a different search or category.</p><button class="outline" id="resetEmpty">Reset filters</button></div>
+</section>
+<section class="cta" id="how"><div><div class="eyebrow">HAVE SOMETHING TO SHARE?</div><h2>Put your business in the spotlight.</h2><p>Reach people in Nakuru who are already looking for what you offer.</p></div><button class="light-btn" id="postCta">Post your listing <span>→</span></button></section>
+</main>
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">N</span><span><b>Nakuru<span>Hub</span></b><small>YOUR CITY. YOUR MARKET.</small></span></a><p>Made for Nakuru. Built for local discovery.</p><small>© <span id="year"></span> NakuruHub. Demo starter project.</small></footer>
+
+<div class="modal hidden" id="listingModal"><div class="modal-card"><button class="close" data-close>×</button><div id="modalContent"></div></div></div>
+<div class="modal hidden" id="postModal"><div class="modal-card"><button class="close" data-close>×</button><div class="eyebrow">JOIN THE MARKETPLACE</div><h2>Post a listing</h2><p class="muted">Add your item, service or opportunity to NakuruHub.</p>
+<form id="postForm">
+<label>Listing title<input name="title" required minlength="4" maxlength="90" placeholder="e.g. 3-bedroom house in Milimani"></label>
+<div class="form-row"><label>Category<select name="category" required><option>Property</option><option>Vehicles</option><option>Shopping</option><option>Services</option><option>Jobs</option><option>Events</option><option>Stays</option><option>Food</option></select></label><label>Price (KES)<input name="price" type="number" min="0" placeholder="0"></label></div>
+<label>Location<input name="location" required placeholder="e.g. Section 58, Nakuru"></label>
+<label>Description<textarea name="description" required minlength="10" maxlength="1000" rows="4" placeholder="Describe what you're offering..."></textarea></label>
+<label>Contact phone<input name="phone" placeholder="+254 7xx xxx xxx"></label>
+<button class="primary wide" type="submit">Publish listing</button><p class="tiny muted">This portable starter stores demo listings in this browser only. Connect a backend before accepting real customer data.</p>
+</form></div></div>
+<div class="toast hidden" id="toast"></div>
+<script src="app.js"></script>
+</body></html>
